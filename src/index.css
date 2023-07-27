@@ -1,0 +1,48 @@
+:root{
+    --bg-color:#040714;
+    --text-color:#f9f9f9;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Avenir-Roman', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color:var(--text-color);
+    text-decoration: none;
+}
+
+/* For larger devices */
+@media only screen and (min-width:768px){
+    body{
+        font-size: 16px;
+    }
+}
+
+/* For medium devices */
+@media only screen and (min-width:480px) and (max-width:768px){
+    body{
+        font-size: 15px;
+    }
+}
+
+/* For smaller devices */
+@media only screen and (max-width:480px){
+    body{
+        font-size: 14px;
+    }
+}
+
+
