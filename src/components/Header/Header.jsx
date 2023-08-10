@@ -6,6 +6,7 @@ import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails }
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -67,30 +68,30 @@ const Header = () => {
             ) : (
                 <>
                     <NavMenu>
-                        <a href="/home">
+                        <Link to="/home">
                             <img src={home_icon} alt="HOME" />
                             <span>HOME</span>
-                        </a>
-                        <a href="/search">
+                        </Link>
+                        <Link to="#">
                             <img src={search_icon} alt="SEARCH" />
                             <span>SEARCH</span>
-                        </a>
-                        <a href="/watchlist">
+                        </Link>
+                        <Link to="#">
                             <img src={watchlist_icon} alt="WATCHLIST" />
                             <span>WATCHLIST</span>
-                        </a>
-                        <a href="/originals">
+                        </Link>
+                        <Link to="#">
                             <img src={original_icon} alt="ORIGINALS" />
                             <span>ORIGINALS</span>
-                        </a>
-                        <a href="/movies">
+                        </Link>
+                        <Link to="#">
                             <img src={movie_icon} alt="MOVIES" />
                             <span>MOVIES</span>
-                        </a>
-                        <a href="/series">
+                        </Link>
+                        <Link to="#">
                             <img src={series_icon} alt="SERIES" />
                             <span>SERIES</span>
-                        </a>
+                        </Link>
                     </NavMenu>
                     <SignOut>
                         <UserImg src={userPhoto} alt={userName} />
